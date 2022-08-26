@@ -3,11 +3,11 @@
   padding: 130px 0;
 
   @include onSmallScreen {
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   @include onSuperSmallScreen {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   &__container {
@@ -25,6 +25,7 @@
 
     @include onSuperSmallScreen {
       font-size: 20px;
+      margin-bottom: 20px;
     }
   }
 

@@ -9,8 +9,10 @@
   &__body {
     margin: 0;
 
-    &--with-menu {
-      overflow: hidden;
+    @include onSuperSmallScreen {
+      &--with-menu {
+        overflow-y: hidden;
+      }
     }
   }
 
@@ -40,7 +42,7 @@
     }
 
     @include onSuperSmallScreen {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
   }
 
