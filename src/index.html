@@ -1,13 +1,331 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
     <link rel="stylesheet" href="./styles/main.scss">
+    <script src="./scripts/main.js" defer></script>
+    <link rel="icon" href="./images/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap" rel="stylesheet">
+    <title>Dianbo</title>
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+  <body class="page__body">
+    <header class="page__header header">
+      <div class="header__content content">
+        <div class="container">
+          <div class="header__top-actions top-actions top-actions--header">
+            <a href="#" class="top-actions__logo logo">
+              Dianbo
+            </a>
+            <a href="#side-menu" class="icon icon--menu"></a>
+            
+            <ul class="menu menu--header">
+              <li class="menu__item">
+                <a href="#about" class="menu__item-link">About</a>
+              </li>
+              <li class="menu__item">
+                <a href="#my-life" class="menu__item-link">Gallery</a>
+              </li>
+              <li class="menu__item">
+                <a href="#hobbies" class="menu__item-link">Hobbies</a>
+              </li>
+              <li class="menu__item">
+                <a href="#subscribe" class="menu__item-link">Subscribe</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-main-info">
+          <div class="container">
+            <div class="grid grid--desktop grid--center">     
+              
+              <div class="grid__item grid__item--1-5 grid__item--desktop-1-8"> 
+                <img src="./images/cat-main-pic.png" 
+                    alt="Header image" 
+                    class="header-main-info__image">
+              </div>
+              <div class="grid__item grid__item--6-8 grid__item--desktop-9-12">
+                <div class="header-main-info__user">
+                  <h1 class="header-main-info__title header-title">
+                    Hello, world!
+                  </h1>
+                  <h2 class="header-main-info__subtitle header-subtitle">
+                    My name is Dianbo
+                  </h2>
+                  <a href="https://instagram.com/dianbo_cat?igshid=YmMyMTA2M2Y=" 
+                    class="button" target="_blank">
+                    Nice to meet you
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="page__side-menu side-menu" id="side-menu">
+      <div class="container">
+        <div class="side-menu__content">
+          <div class="side-menu__top-actions top-actions top-actions--side-menu">
+            <a href="#" class="top-actions__logo logo logo--side-menu">
+              Dianbo
+            </a>
+            <a href = "#" 
+                class="top-actions__icon icon icon--cross"
+            ></a>
+          </div>
+        
+          <ul class="side-menu__list">
+            <li class="side-menu__item">
+              <a href="#about" class="side-menu__link">About</a>
+            </li>
+            <li class="side-menu__item">
+              <a href="#my-life" class="side-menu__link">Gallery</a>
+            </li>
+            <li class="side-menu__item">
+              <a href="#hobbies" class="side-menu__link">Hobbies</a>
+            </li>
+            <li class="side-menu__item">
+              <a href="#subscribe" class="side-menu__link">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page__section about" id="about">
+      <div class="container">
+        <div class="about__container">
+          <h3 class="about__title">
+            About me
+          </h3>
+          <p class="about__text">
+            I am a small cat in a big world. I have a little pink nose <br> 
+            and big beautiful eyes. I am interested in everything that surrounds me. <br>
+            My favourite pillow is human`s arm, I like massage, hugs and treats.<br>
+            I think we can be <a href="https://instagram.com/dianbo_cat?igshid=YmMyMTA2M2Y=" 
+                                 class="special" 
+                                 target="_blank">
+                                 friends!
+                              </a><br>
+            Follow <a href="https://instagram.com/dianbo_cat?igshid=YmMyMTA2M2Y=" 
+                     class="special" 
+                     target="_blank">
+                      my page
+                   </a> and learn more about my life!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="page__section my-life" id="my-life">
+      <div class="container">
+        <h3 class="my-life__title">
+          My life
+        </h3>
+      
+        <div class="my-life__gallery gallery">
+          <div class="grid grid--desktop">
+            <div class="grid__item grid__item--1-4 grid__item--desktop-1-6">
+              <div class="gallery__images-block images-block images-block--1">
+                <div class="images-block__big-video big-video">
+                  <video autoplay muted
+                         loop preload="auto"
+                         src="./images/gallery/video3.MP4" 
+                         alt="video" class="big-video__image">
+                  </video>
+                </div>
+
+                <div class="images-block__photos">
+                  <div class="images-block__small-photo small-photo">
+                    <img src="./images/gallery/5.jpg"
+                         alt="image"
+                         class="small-photo__image">
+                  </div>
+  
+                  <div class="images-block__small-photo small-photo">
+                    <img src="./images/gallery/6.jpg"
+                         alt="image"
+                         class="small-photo__image">
+                  </div>
+                </div>
+                <a href="https://www.instagram.com/reel/CZ2sw0oNwWf/?igshid=YmMyMTA2M2Y=" class="images-block__theme theme theme--1">
+                  My outfits
+                </a>
+              </div> 
+            </div>
+
+            <div class="grid__item grid__item--5-8 grid__item--desktop-7-12">
+              <div class="gallery__images-block images-block images-block--right images-block--2">
+                <div class="images-block__photos">
+                  <div class="images-block__small-photo small-photo">
+                    <img src="./images/gallery/4.PNG" 
+                         alt="image" 
+                         class="small-photo__image">
+                  </div>
+  
+                  <div class="images-block__small-photo small-photo">
+                    <img src="./images/gallery/5.PNG"
+                         alt="image"
+                         class="small-photo__image">
+                  </div>
+                </div>
+
+                <div class="images-block__big-video big-video">
+                  <video autoplay muted 
+                         loop preload="auto" 
+                         src="./images/gallery/video 2.MP4" 
+                         alt="video" class="big-video__image"> 
+                  </video>
+                </div>
+
+                <a href="https://www.instagram.com/p/Cb89rVMppHa/?igshid=YmMyMTA2M2Y=" class="images-block__theme theme theme--right theme--2">
+                  My rest
+                </a>
+              </div>
+            </div>
+
+            <div class="grid__item grid__item--1-4 grid__item--desktop-1-6">
+              <div class="gallery__images-block images-block images-block--right images-block--3">
+                <div class="images-block__photos">
+                  <div class="images-block__small-photo small-photo">
+                    <img src="./images/gallery/7.jpg" 
+                         alt="image" 
+                         class="small-photo__image">
+                  </div>
+  
+                  <div class="images-block__small-photo small-photo">
+                    <img src="./images/gallery/8.jpg" 
+                         alt="image" 
+                         class="small-photo__image">
+                  </div>
+                </div>
+
+                <div class="images-block__big-video big-video">
+                  <video autoplay muted 
+                         loop preload="auto" 
+                         src="./images/gallery/video4.MP4" 
+                         alt="video" class="big-video__image">
+                  </video>
+                </div>
+
+                <a href="https://www.instagram.com/reel/Cdmb2eQOkyP/?igshid=YmMyMTA2M2Y=" class="images-block__theme theme theme--right theme--3">
+                  My treats
+                </a>
+              </div>
+            </div>
+
+            <div class="grid__item grid__item--5-8 grid__item--desktop-7-12">
+              <div class="gallery__images-block images-block images-block--4">
+                <div class="images-block__big-video big-video">
+                  <video autoplay muted 
+                         loop preload="auto" 
+                         src="./images/gallery/video6.MP4" 
+                         alt="video" class="big-video__image">
+                  </video>
+                </div>
+
+                <div class="images-block__photos">
+                  <div class="images-block__small-photo small-photo">
+                    <img src="./images/gallery/9.PNG" 
+                         alt="image" 
+                         class="small-photo__image">
+                  </div>
+  
+                  <div class="images-block__small-photo small-photo">
+                    <img src="./images/gallery/10.PNG" 
+                         alt="image" 
+                         class="small-photo__image">
+                  </div>
+                </div>
+                <a href="https://www.instagram.com/p/CRt-1QUH6oX/?igshid=YmMyMTA2M2Y=" class="images-block__theme theme theme--4">
+                  Funny me
+                </a>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page__section my-hobbies" id="hobbies">
+      <div class="container">
+        <h2 class="my-hobbies__title">
+          My hobbies
+        </h2>
+        <div class="my-hobbies__content">
+          <div class="my-hobbies__card hobby-card">
+            <div class="hobby-card__photo photo photo--1"></div>
+            <h3 class="hobby-card__title">
+              Playing piano
+            </h3>
+            <p class="hobby-card__description">
+              Everyone says that <br>
+              I'm a very creative cat
+            </p>
+          </div>
+          <div class="my-hobbies__card hobby-card">
+            <div class="hobby-card__photo photo photo--2"></div>
+            <h3 class="hobby-card__title">
+              Gardening
+            </h3>
+            <p class="hobby-card__description">
+              I like nature so much <br>
+              (Especially, flowers)
+            </p>
+          </div>
+          <div class="my-hobbies__card hobby-card">
+            <div class="hobby-card__photo photo photo--3"></div>
+            <h3 class="hobby-card__title">
+              Cooking
+            </h3>
+            <p class="hobby-card__description">
+              More than cooking I <br>
+              like only eating
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe" id="subscribe">
+      <div class="subscribe__block">
+        <h2 class="subscribe__title">
+          Follow my instagram! <br>
+          Follow my life!
+        </h2>
+        <a href="https://instagram.com/dianbo_cat?igshid=YmMyMTA2M2Y=" 
+          class="button button--pink" target="_blank">
+          Subscribe
+        </a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="header__top-actions top-actions top-actions--footer">
+          <a href="#" class="top-actions__logo logo logo--footer">
+            Dianbo
+          </a>
+          
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#about" class="menu__item-link">About</a>
+            </li>
+            <li class="menu__item">
+              <a href="#my-life" class="menu__item-link">Gallery</a>
+            </li>
+            <li class="menu__item">
+              <a href="#hobbies" class="menu__item-link">Hobbies</a>
+            </li>
+            <li class="menu__item">
+              <a href="#subscribe" class="menu__item-link">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

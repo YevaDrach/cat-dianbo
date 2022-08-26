@@ -1,0 +1,228 @@
+.header {
+  // background: linear-gradient(0deg, #080806 0%, 
+  // #393517 24.48%, rgba(223, 213, 81, 0) 100%),
+  //   linear-gradient(100deg, #cacb8c, #cacb8c);
+  width: 100vw;
+  
+
+  &__content {
+    overflow: hidden;
+    height: max-content;
+    padding: $header-top-padding 0 0;
+
+    @include onDesktop {
+      padding: 20px 0 0;
+    }
+    
+    @include onSmallScreen {
+      padding: 30px 0;
+    }
+
+    @include onSuperSmallScreen {
+      padding: 20px 0;
+    }
+  }
+
+  &__top-actions {
+    margin-bottom: 30px;
+    
+    @include onSmallScreen {
+      margin-bottom: 50px;
+    }
+
+    @include onSuperSmallScreen {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+
+  &--header {
+    @include onSuperSmallScreen {
+      justify-content: flex-start;
+    }
+  }
+
+  &--side-menu {
+    justify-content: space-between;
+  }
+
+  &--footer {
+    margin-bottom: 0;
+    
+    @include onSuperSmallScreen {
+      display: block;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+
+  @include onSuperSmallScreen {
+    margin: 8px 0 0;
+  }
+
+  &--header {
+    @include onSuperSmallScreen {
+      display: none;
+    }
+  }
+ 
+  &__item {
+    list-style: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+
+    @include onSmallScreen {
+      margin-right: 12px;
+    }
+
+    @include onSuperSmallScreen {
+      margin-right: 12px;
+    }
+  }
+
+  &__item-link {
+    color: #fff;
+    padding: 10px 0;
+    font-family: "Aboreto", cursive;
+    font-size: 20px;
+    line-height: 125%;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.8s;
+
+    @include onMobile {
+      font-size: 17px;
+    }
+
+    @include onSmallScreen {
+      font-size: 14px;
+    }
+
+    @include onSuperSmallScreen {
+      font-size: 11px;
+    }
+
+    &:hover {
+      color: #cc9478;
+      font-weight: 700;
+      transition: all 0.8s;
+    }
+  }
+}
+
+.header-main-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__user {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+  }
+  
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include onSmallScreen {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    @include onSuperSmallScreen {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+  
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 16px;
+
+    @include onSmallScreen {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    @include onSuperSmallScreen {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+  }
+  
+  &__image {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    height: 550px;
+
+    @include onMobile {
+      height: 400px;
+    }
+
+    @include onSmallScreen {
+      height: 350px;
+      margin-bottom: 30px;
+    }
+
+    @include onSuperSmallScreen {
+      height: 200px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.header-subtitle {
+  width: 100%;
+  font-family: "Aboreto", cursive;
+  font-size: 30px;
+  line-height: 146%;
+  font-weight: 400;
+  color: #fff;
+
+  @include onMobile {
+    font-size: 19px;
+  }
+
+  @include onSmallScreen {
+    font-size: 17px;
+  }
+
+  @include onSuperSmallScreen {
+    font-size: 13px;
+  }
+}
+
+.header-title {
+  font-family: "Silkscreen", cursive;
+  font-size: 54px;
+  line-height: 100%;
+  color: $color-yellow-for-text;
+
+  @include onMobile {
+    font-size: 45px;
+  }
+
+  @include onSmallScreen {
+    font-weight: 700;
+    font-size: 25px;
+  }
+
+  @include onSuperSmallScreen {
+    font-size: 25px;
+  }
+}

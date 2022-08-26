@@ -1,0 +1,151 @@
+.my-life {
+  &__title {
+    @extend %section-title;
+    color: rgb(119, 91, 21);
+  }
+}
+
+.gallery {
+  &__images-block {
+    margin-right: 20px;
+  }
+}
+
+.images-block {
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+  border: 8px dotted $color-yellow-for-text;
+  background-color: #cab4242d;
+  grid-template-columns: 65% 30%;
+  column-gap: 20px;
+
+  @include onDesktop {
+    &:hover {
+      .big-video {
+        visibility: visible;
+      }
+
+      .small-photo {
+        visibility: visible;
+      }
+    }
+  }
+
+  @include onSuperSmallScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--right {
+    grid-template-columns: 30% 65%;
+  }
+
+  &:nth-child(-n+2) {
+    margin-bottom: 40px;
+  }
+
+  &__big-video {
+    @include onSuperSmallScreen {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__photos {
+    margin-bottom: 10px;
+
+    @include onSuperSmallScreen {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__small-photo {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include onSuperSmallScreen {
+        margin-bottom: 0;
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+.big-video {
+  height: 350px;
+  width: 100%;
+
+  @include onDesktop {
+    visibility: hidden;
+  }
+
+  @include onMobile {
+    height: 300px;
+  }
+
+  @include onSuperSmallScreen {
+    height: 200px;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.small-photo {
+  height: 155px;
+  width: 155px;
+
+  @include onDesktop {
+    visibility: hidden;
+  }
+
+  @include onMobile {
+    height: 120px;
+    width: 120px;
+  }
+
+  @include onSmallScreen {
+    height: 110px;
+    width: 110px;
+  }
+
+  @include onSuperSmallScreen {
+    height: 90px;
+    width: 90px;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.theme {
+  @extend %page-text;
+  white-space: nowrap;
+  display: inline;
+  text-decoration: none;
+  color: rgb(119, 91, 21);
+  font-size: 32px;
+  padding-left: 20px;
+
+  @include onSuperSmallScreen {
+    font-size: 20px;
+    padding: 0;
+  }
+}

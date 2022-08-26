@@ -1,0 +1,42 @@
+.side-menu {
+  display: none;
+  overflow: hidden;
+  background-color: $color-yellow;
+
+  @include onSuperSmallScreen {
+    display: block;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    height: 100vh;
+    padding: $header-top-padding 0;
+  }
+
+  &__top-actions {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+  &__link {
+    display: inline-block;
+    font-family: "Aboreto", cursive;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 125%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: left;
+    white-space: nowrap;
+  }
+}

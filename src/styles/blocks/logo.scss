@@ -1,0 +1,32 @@
+.logo {
+  margin: 0;
+  margin-right: 20px;
+
+  display: block;
+  padding-left: 20px;
+  font-family: "Rubik Iso", cursive;
+  color: $color-yellow-for-text;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 37px;
+
+  @include onSmallScreen {
+    font-size: 30px;
+  }
+
+  @include onSuperSmallScreen {
+    font-size: 20px;
+  }
+
+  &--side-menu {
+    margin-right: 0;
+    padding-left: 0;
+    color: #fff;
+  }
+
+  &--footer {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+}
