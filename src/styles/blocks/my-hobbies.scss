@@ -1,0 +1,140 @@
+.my-hobbies {
+  &__title {
+    @extend %section-title;
+    color: rgb(119, 91, 21);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include onSmallScreen {
+      display: block;
+    }
+
+    @include onSuperSmallScreen {
+      display: block;
+    }
+  }
+
+  &__card:not(:last-child) {
+    margin-right: 30px;
+
+    @include onSmallScreen {
+      margin-bottom: 20px;
+    }
+
+    @include onSuperSmallScreen {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.hobby-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  background-color: #cab4242d;
+  border-radius: 30px;
+  transition: all 0.5s;
+
+  &__title {
+    @extend %page-text;
+    text-align: center;
+    font-size: 30px;
+    
+    color: #fff;
+
+    @include onSuperSmallScreen {
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    @extend %page-text;
+    text-align: center;
+    color: #fff;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: #dfab91;
+    box-shadow: 3px 3px 3px rgb(111, 23, 9);
+    transition: all 0.5s;
+
+    .hobby-card__title {
+      transition: all 0.5s;
+      color: rgb(111, 23, 9);
+    }
+
+    .hobby-card__description {
+      transition: all 0.5s;
+      color: rgb(111, 23, 9);
+    }
+  }
+
+  @include onMobile {
+    height: 400px;
+  }
+
+  @include onSmallScreen {
+    width: 100%;
+  }
+
+  @include onSuperSmallScreen {
+    width: 100%;
+  }
+
+  &__photo {
+    margin-bottom: 30px;
+  }
+}
+
+.photo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  height: 300px;
+  transition: all 1s;
+
+  @include onMobile {
+    height: 450px;
+  }
+
+  &--1 {
+    background-image: url("../images/hobbies/1.PNG");
+
+    @include onSmallScreen {
+      background-position: center;
+    }
+
+    &:hover {
+      background-position: center;
+      background-image: url("../images/hobbies/1-hover.JPG");
+    }
+  }
+
+  &--2 {
+    background-image: url("../images/hobbies/2.JPG");
+
+    &:hover {
+      background-image: url("../images/hobbies/2-hover.JPG");
+    }
+  }
+
+  &--3 {
+    background-image: url("../images/hobbies/3.JPG");
+
+    @include onSmallScreen {
+      background-position: center;
+    }
+
+    &:hover {
+      background-image: url("../images/hobbies/3-hover.JPG");
+    }
+  }
+}

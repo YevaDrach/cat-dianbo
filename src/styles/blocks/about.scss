@@ -1,0 +1,51 @@
+.about {
+  background-color: $color-yellow-for-text;
+  padding: 130px 0;
+
+  @include onSmallScreen {
+    padding: 80px 0;
+  }
+
+  @include onSuperSmallScreen {
+    padding: 40px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    @extend %section-title;
+    margin-bottom: 30px;
+    font-size: 30px;
+
+    @include onSuperSmallScreen {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    @extend %page-text;
+  }
+}
+
+.special {
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.8s;
+  padding-bottom: 1.5px;
+  border-bottom: 2px solid #fff;
+  
+  &:hover {
+    color: #a07e6c;
+    letter-spacing: 2.5px;
+    transition: all 0.7s;
+    border-bottom: 2px dashed #a07e6c;
+  }
+}

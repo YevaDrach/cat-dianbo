@@ -2,3 +2,37 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+
+%section-title {
+  margin: 0;
+  margin-bottom: 70px;
+  text-align: center;
+  font-family: "Aboreto", cursive;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  font-size: 36px;
+
+  @include onSmallScreen {
+    font-size: 25px;
+  }
+
+  @include onSuperSmallScreen {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+%page-text {
+  margin: 0;
+  font-family: "Gochi Hand", cursive;
+  color: #fff;
+  line-height: 165%;
+  letter-spacing: 1px;
+  font-size: 19px;
+
+  @include onSuperSmallScreen {
+    font-size: 15px;
+  }
+}

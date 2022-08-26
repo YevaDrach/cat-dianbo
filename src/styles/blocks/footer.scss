@@ -1,0 +1,9 @@
+.footer {
+  margin: 0 auto;
+  padding: 17px 0;
+  background-color: rgb(119, 91, 21);
+
+  @include onSuperSmallScreen {
+    padding: 10px 0;
+  }
+}

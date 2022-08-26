@@ -4,3 +4,27 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin onDesktop {
+  @media (min-width: 1360px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: 1360px) and (min-width: 870px) {
+    @content;
+  }
+}
+
+@mixin onSmallScreen {
+  @media (max-width: 870px) and (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin onSuperSmallScreen {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
